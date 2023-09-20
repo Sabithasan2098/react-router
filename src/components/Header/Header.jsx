@@ -1,19 +1,36 @@
-import { Link } from "react-router-dom";
-
- 
-
+import { Link, NavLink } from "react-router-dom";
+import './Header.css'
 const Header = () => {
-    return (
-        <div>
-            <nav  >
-                <Link className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl" to={"/"}>Home</Link>
-                <Link className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl" to={"/post"}>Post</Link>
-                <Link className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl" to={"/about"}>About</Link>
-                <Link className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl" to={"contact"}>Contact</Link>
-                <Link className="hover:bg-lime-200 py-2 px-4 rounded-xl" to={"users"}>Users</Link>
-            </nav>
-        </div>
-    );
+  return (
+    <div className="nav">
+      <nav >
+        < NavLink className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl" to={"/"}>
+          Home
+        </ NavLink>
+        < NavLink
+          className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl"
+          to={"/post"}
+        >
+          Post
+        </ NavLink>
+        < NavLink
+          className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl"
+          to={"/about"}
+        >
+          About
+        </ NavLink>
+        < NavLink
+          className="mr-4 hover:bg-lime-200 py-2 px-4 rounded-xl"
+          to={"contact"}
+        >
+          Contact
+        </ NavLink>
+        < NavLink className="hover:bg-lime-200 py-2 px-4 rounded-xl" to={"users"}>
+          Users
+        </ NavLink>
+      </nav>
+    </div>
+  );
 };
 
 export default Header;
